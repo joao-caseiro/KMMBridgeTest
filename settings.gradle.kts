@@ -16,4 +16,10 @@ dependencyResolutionManagement {
     }
 }
 
-include("breeds", "analytics", "allshared", ":testapps:android")
+include(
+    "breeds",
+    "domain",
+    "analytics",
+    "allshared",
+    ":testapps:android"
+)
