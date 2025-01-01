@@ -17,9 +17,13 @@ dependencyResolutionManagement {
 }
 
 include(
-    "breeds",
-    "domain",
-    "analytics",
+    "stupidmodule",
+//    "moduleTwo",
+//    "breeds",
+//    "domain",
+//    "analytics",
     "allshared",
+//    "core",
     ":testapps:android"
+
 )

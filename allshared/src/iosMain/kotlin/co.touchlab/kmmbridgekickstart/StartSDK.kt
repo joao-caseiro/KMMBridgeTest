@@ -1,11 +1,10 @@
 package co.touchlab.kmmbridgekickstart
 
-fun startSDK(analytics: Analytics): SDKHandle {
-    val analyticsHandle = initAnalytics(analytics)
+import com.example.simpletest.moduleOne.makeSimple
+
+fun startSDK(): SDKHandle {
     return SDKHandle(
-        breedRepository = breedStartup(analyticsHandle),
-        appAnalytics = analyticsHandle.appAnalytics,
-        breedAnalytics = analyticsHandle.breedAnalytics
+        simpleClass = makeSimple(true, sayHello())
     )
 }
 

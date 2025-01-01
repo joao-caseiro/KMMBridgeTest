@@ -6,17 +6,24 @@ plugins {
     `maven-publish`
 }
 
+group = "co.uk.simpletest.product.finder"
+//version = "1.0.0"
+
 kotlin {
     androidTarget {
         publishAllLibraryVariants()
     }
-    iosX64()
-    iosArm64()
-    iosSimulatorArm64()
+//    iOS {
+        iosX64()
+        iosArm64()
+        iosSimulatorArm64()
+//    }
 
     sourceSets {
-        commonMain.dependencies {
-            implementation(libs.touchlab.stately.concurrency)
+        commonMain {
+            dependencies {
+                implementation(libs.touchlab.stately.concurrency)
+            }
         }
     }
 
@@ -25,9 +32,6 @@ kotlin {
         jvmToolchain(17)
     }
 }
-
-// For publishing Android AAR files to GitHub Packages
-addGithubPackagesRepository()
 
 android {
     compileSdk = libs.versions.compileSdk.get().toInt()
@@ -40,5 +44,8 @@ android {
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
     }
-    namespace = "co.touchlab.kmmbridgekickstart.analytics"
+    namespace = "com.anothername.simpletest.moduleOne"
 }
+
+// For publishing Android AAR files to GitHub Packages
+addGithubPackagesRepository()

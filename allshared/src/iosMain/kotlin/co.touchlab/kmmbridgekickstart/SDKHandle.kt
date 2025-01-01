@@ -1,9 +1,7 @@
 package co.touchlab.kmmbridgekickstart
 
-import co.touchlab.kmmbridgekickstart.repository.BreedRepository
+import com.example.simpletest.moduleOne.SimpleTestClass
 
 data class SDKHandle(
-    val breedRepository: BreedRepository,
-    val appAnalytics: AppAnalytics,
-    val breedAnalytics: BreedAnalytics
+    val simpleClass: SimpleTestClass,
 )

@@ -39,6 +39,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
 }
 
 val remoteBuild = false
@@ -61,11 +64,11 @@ val LIBRARY_VERSION:String by project
 
 dependencies {
     if (remoteBuild) {
-        implementation("${GROUP}:analytics-android-debug:${LIBRARY_VERSION}")
-        implementation("${GROUP}:breeds-android-debug:${LIBRARY_VERSION}")
+        implementation("${GROUP}:stupidmodule-android-debug:${LIBRARY_VERSION}")
+//        implementation("${GROUP}:moduleTwo-android-debug:${LIBRARY_VERSION}")
     } else {
-        implementation(project(":analytics"))
-        implementation(project(":breeds"))
+        implementation(project(":stupidmodule"))
+//        implementation(project(":moduleTwo"))
     }
     implementation(libs.bundles.app.ui)
     implementation(libs.koin.android)

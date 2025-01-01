@@ -15,15 +15,15 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            export(project(":analytics"))
+            export(project(":stupidmodule"))
             isStatic = true
         }
     }
 
     sourceSets {
         commonMain.dependencies {
-            implementation(project(":breeds"))
-            api(project(":analytics"))
+//            implementation(project(":moduleTwo"))
+            api(project(":stupidmodule"))
         }
     }
 }
