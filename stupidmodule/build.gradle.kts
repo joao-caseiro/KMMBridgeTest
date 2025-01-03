@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+import java.util.Properties
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -7,7 +8,7 @@ plugins {
 }
 
 group = "co.uk.simpletest.product.finder"
-//version = "1.0.0"
+version = "0.5.0"
 
 kotlin {
     androidTarget {
@@ -44,8 +45,24 @@ android {
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
     }
-    namespace = "com.anothername.simpletest.moduleOne"
+    namespace = "co.uk.simpletest.product.finder.stupidmodule"
 }
 
 // For publishing Android AAR files to GitHub Packages
 addGithubPackagesRepository()
+
+//
+//val properties = Properties()
+//properties.load(project.rootProject.file("local.properties").inputStream())
+//publishing {
+//    repositories {
+//        maven {
+//            name = "GitHubPackages"
+//            url = uri("https://maven.pkg.github.com/joao-caseiro/KMMBridgeTest")
+//            credentials {
+//                username = properties.getProperty("github.user")
+//                password = properties.getProperty("github.token")
+//            }
+//        }
+//    }
+//}

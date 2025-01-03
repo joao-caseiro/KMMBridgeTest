@@ -67,7 +67,8 @@ dependencies {
         implementation("${GROUP}:stupidmodule-android-debug:${LIBRARY_VERSION}")
 //        implementation("${GROUP}:moduleTwo-android-debug:${LIBRARY_VERSION}")
     } else {
-        implementation(project(":stupidmodule"))
+        implementation("co.uk.simpletest.product.finder:stupidmodule:0.2.0")
+//        implementation(project(":stupidmodule"))
 //        implementation(project(":moduleTwo"))
     }
     implementation(libs.bundles.app.ui)
