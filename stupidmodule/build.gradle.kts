@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "co.uk.simpletest.product.finder"
-version = "0.5.0"
+//version = "0.5.0"
 
 kotlin {
     androidTarget {
